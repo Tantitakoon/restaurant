@@ -30,12 +30,8 @@
             "JWT_SECRET": "bA2xcjpf8y5aSUFsNB2qN5yymUBSs6es3qHoFpGkec75RCeBb8cpKauGefw5qy4",
             "JWT_EXPIRATION_MINUTES": 15,
             "JWT_DATA_STORAGE": "bjNsbGlrQGVOQzBkM0RhVEBzdDBSQGdl",
-            "PAGE_ACCESS_TOKEN":"EAAP8JVVEIhYBAMu8byKJp2A5vYwKCqhiTe89ZBnB0OC3wh9YUUkJQWT3JAFftwZCDHjjKZBnv4HmAKWF9tPgHpmUS8AVOWpYSK7XrtbhHBJpv8DMdHZBs9qztiiXUUDIiTcSWBvv9FBWu2RHZCXqVZCgPzpNtsvqmnYs6qQXyxAQZDZD",   
-            "SERVER_URL" : "https://fbaichatbot.herokuapp.com/",
-            "APP_SECRET" : "049bb6e110afcbab24efc6cdc0006804",
-            "APP_ID_1" : "328603777882993",
-            "APP_ID_2" : "238457520086338",
-            "TOKEN" : "tonnarak"
+            "PAGE_ACCESS_TOKEN":"EAAH6pu5oZBOABAIOSQM5hBZAJR7JXEr8L2zMBVbUDcmrXycutLHfZCKtmE0NxszeCUAH4KPzpVTzNrNudQy5PpRKhGGDYr1gTCBA7FTvYZARj2Oui0NJ9HaiFYE5je44Y95bXeTO9LuOjzC39qStj7MFKZBXIZCuifsdvM92knfAZDZD",   
+            "TOKEN" : "restaurant"
 
         }
     }]

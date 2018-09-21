@@ -5,7 +5,7 @@ var _server = require('./server');
 var _server2 = _interopRequireDefault(_server);
 
 function _interopRequireDefault(obj) { 
-     console.log("=================START JA==============");
+     console.log("=================START Resturant==============");
     return obj && obj.__esModule ? obj : { default: obj }; 
 }
 

@@ -35,9 +35,5 @@ var ENV = exports.ENV = {
     X_AOG_KEY: process.env.X_AOG_KEY,
     
     PAGE_ACCESS_TOKEN:process.env.PAGE_ACCESS_TOKEN,
-    SERVER_URL : process.env.SERVER_URL,
-    APP_SECRET : process.env.APP_SECRET,
-    APP_ID_1 : process.env.APP_ID_1,
-    APP_ID_2 : process.env.APP_ID_2,
     TOKEN : process.env.TOKEN
 };
