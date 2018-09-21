@@ -42,7 +42,7 @@ var Intent = exports.Intent = function () {
         this.value = null;
         this.language = null;
         this.user_token = null ;
-        this.location = null ;
+        this.location = {} ;
 
         this.rich = {
             MessengerBasic:null,
@@ -199,7 +199,9 @@ var Intent = exports.Intent = function () {
                                     {
                                         lat = messageAttachments[0].payload.coordinates.lat;
                                         long = messageAttachments[0].payload.coordinates.long;
-                                        console.log(lat +" , "+ long);
+                                        this.location.lat = lat ; 
+                                        this.location.long = long ; 
+                                        console.log(     this.location.lat + " " +  this.location.long );
  
                                 
                                     }
