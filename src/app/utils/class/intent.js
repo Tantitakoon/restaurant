@@ -174,9 +174,10 @@ var Intent = exports.Intent = function () {
                                     {
                                         lat = messageAttachments[0].payload.coordinates.lat;
                                         long = messageAttachments[0].payload.coordinates.long;
-                                        this.location.lat = lat ; 
-                                        this.location.long = long; 
-                                        this.getPlace(); 
+                                        console.log("location :" + lat +" "+long);
+                                       // this.location.lat = lat ; 
+                                       // this.location.long = long; 
+                                       // this.getPlace(); 
                                     }
                                    
 
