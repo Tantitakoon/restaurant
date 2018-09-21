@@ -61,7 +61,7 @@ var process = exports.process = function (_Intent) {
     }, {
         key: 'getLocation',
         value: function getLocation() {
-                console.log('getLocation');
+            serviceResponse.callGetPlace();
         }
     }, {
         key: 'res',

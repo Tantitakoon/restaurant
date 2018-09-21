@@ -67,7 +67,7 @@ var Intent = exports.Intent = function () {
          }
          this.callWebhook = this.callWebhook.bind(this);
          this._ = this._.bind(this);
-         this.getLocation = this.getLocation.bind(this);
+        
          this.app.post('/webhook',this.callWebhook);
          this.app.get('/webhook',this.callGetWebhook);
     }
@@ -94,11 +94,6 @@ var Intent = exports.Intent = function () {
             this.next = this.next.bind(this);
             this.end = this.end.bind(this);
             return this.onInit(this.data);
-        }
-    },{
-        key: 'getLocation',
-        value: function getLocation() {
-            return this.onInitPlace(this.location);
         }
     },{
       key:'callGetWebhook',
@@ -198,7 +193,7 @@ var Intent = exports.Intent = function () {
                         }else if(webhook_event.message.attachments){
                                     
                                    var messageAttachments = webhook_event.message.attachments;
-                                   console.log("messageAttachments : "+messageAttachments);
+                                   
                                    var lat = null;
                                    var long = null;
                                     if(messageAttachments[0].payload.coordinates)
@@ -207,7 +202,7 @@ var Intent = exports.Intent = function () {
                                         long = messageAttachments[0].payload.coordinates.long;
                                         this.location.lat = lat ; 
                                         this.location.long = long ; 
-                                    
+                                        return this.onInitPlace(this.location);
                                 
                                     }
                                  
