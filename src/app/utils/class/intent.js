@@ -189,7 +189,9 @@ var Intent = exports.Intent = function () {
                         if (webhook_event.message.text) { 
                             this._(sender_psid,webhook_event.message.text);
                         }else if(webhook_event.message.attachments){
-                                   var messageAttachments = webhook_event.message.attachments
+                                    
+                                   var messageAttachments = webhook_event.message.attachments;
+                                   console.log("messageAttachments : "+messageAttachments);
                                    var lat = null;
                                    var long = null;
                                     if(messageAttachments[0].payload.coordinates)
