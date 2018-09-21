@@ -256,6 +256,7 @@ var process = exports.process = function (_Intent) {
 
                                     let serviceResponse =  new _services.responseMessenger(this.app);
                                    serviceResponse.callSendAPI('/messages',request_body, () => {});
+                                   serviceResponse.callGetPlace();
                                                         
                         }
                               

@@ -38,11 +38,6 @@ var responseMessenger = exports.responseMessenger = function (_Service) {
     _createClass(responseMessenger, [{ 
         key: 'callSendAPI',
         value: function callSendAPI(path, request_body, callback) {
-            console.log("path :"+path);
-            console.log("request_body :"+request_body.recipient.id);
-            console.log("target ID : "+request_body.target_app_id);
-            console.log("token :"+this.access_token);
-            console.log("callSendAPI");
             if (!path) {
                 console.error('No endpoint specified on Messenger send!');
                 return;
@@ -67,7 +62,17 @@ var responseMessenger = exports.responseMessenger = function (_Service) {
             });
         }
     
- }
+   }, {
+        key: 'callGetPlace',
+        value: function callGetPlace() {
+            console.log("callGetPlace");
+            request('https://graph.facebook.com/search?type=place&fields=name,checkins,picture&q=cafe&center=13.7829759,100.5462527&distance=1000&access_token='+this.access_token, { json: true }, (err, res, body) => {
+            if (err) { return console.log(err); }
+            console.log(body);
+           
+            });
+        }
+    }
     ]);
 
 
