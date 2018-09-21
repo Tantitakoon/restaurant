@@ -42,6 +42,7 @@ var Intent = exports.Intent = function () {
         this.value = null;
         this.language = null;
         this.user_token = null ;
+        this.location = null ;
 
         this.rich = {
             MessengerBasic:null,
@@ -198,8 +199,11 @@ var Intent = exports.Intent = function () {
                                     {
                                         lat = messageAttachments[0].payload.coordinates.lat;
                                         long = messageAttachments[0].payload.coordinates.long;
+                                        this.location.lat = lat ;
+                                        this.location.long = long ; 
+                                
                                     }
-                                    console.log("attachments  :lat = "+lat+" long = "+long);
+                                    console.log("attachments  :lat = "+ this.location.lat+" long = "+this.location.long);
 
                         } else if (webhook_event.postback) {
                             handlePostback(sender_psid, webhook_event.postback);
