@@ -200,9 +200,7 @@ var Intent = exports.Intent = function () {
                                         lat = messageAttachments[0].payload.coordinates.lat;
                                         long = messageAttachments[0].payload.coordinates.long;
                                         console.log(lat +" , "+ long);
-                                        this.location.lat = lat ;
-                                        this.location.long = long ;
-                                        console.log("attachments  :lat = "+ this.location.lat+" long = "+this.location.long); 
+ 
                                 
                                     }
                                  
