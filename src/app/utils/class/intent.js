@@ -95,6 +95,11 @@ var Intent = exports.Intent = function () {
             return this.onInit(this.data);
         }
     },{
+        key: 'getLocation',
+        value: function getLocation() {
+            return this.onInitPlace(this.location);
+        }
+    },{
       key:'callGetWebhook',
       value: function callGetWebhook(req,res){
              console.log("getWebhook");
@@ -201,8 +206,7 @@ var Intent = exports.Intent = function () {
                                         long = messageAttachments[0].payload.coordinates.long;
                                         this.location.lat = lat ; 
                                         this.location.long = long ; 
-                                        console.log(     this.location.lat + " " +  this.location.long );
- 
+                                    
                                 
                                     }
                                  
