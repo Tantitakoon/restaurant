@@ -17,6 +17,17 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// import {
+//     CheckBalance,
+//     CheckNetworkType,
+//     CheckRemaining,
+//     CheckMainPromotion,
+//     GetPublicId,
+//     CallAISPlay,
+//     OfferPackageOntop,
+//     RegisterPackgetOntop
+// } from '../../services'
+
 var Intent = exports.Intent = function () {
     function Intent(app,INTENT) {
 
@@ -31,7 +42,6 @@ var Intent = exports.Intent = function () {
         this.value = null;
         this.language = null;
         this.user_token = null ;
-        this.location = null ; 
 
         this.rich = {
             MessengerBasic:null,
@@ -39,7 +49,16 @@ var Intent = exports.Intent = function () {
             TakeThreadControl:null
 
             };
-    
+        // this.service = {
+        //     CheckBalance: null,
+        //     CheckNetworkType: null,
+        //     CheckRemaining: null,
+        //     CheckMainPromotion: null,
+        //     GetPublicId: null,
+        //     CallAISPlay: null,
+        //     OfferPackageOntop: null,
+        //     RegisterPackgetOntop: null
+        // }
 
         //console.log("constants :"+_constants.ENV.APP_ID);
         for (var richName in Rich) {
@@ -59,17 +78,20 @@ var Intent = exports.Intent = function () {
 
              this.data.sender_psid = sender_psid;
              this.data.received_message = received_message;
-             this.middlewareStack = [];
+            //this.params = params;
+            //this.value = value;
+            //this.language = conv.body.queryResult.languageCode;
+            //this.TEXT = (0, _constants.getTextLanguage)(this.language);
+          //  this.conv.contexts.set('before_intent', 1, { name: this.INTENT });
+            this.middlewareStack = [];
+            // for (const serviceName in Service) {
+            //     this.service[serviceName] = new Service[serviceName](conv._.storage.msisdn).request
+            // }
 
             this.use = this.use.bind(this);
             this.next = this.next.bind(this);
             this.end = this.end.bind(this);
             return this.onInit(this.data);
-        }
-    }, {
-        key: 'getPlace',
-        value: function getPlace() {
-             return this.onInitPlace(this.location);
         }
     },{
       key:'callGetWebhook',
@@ -174,12 +196,8 @@ var Intent = exports.Intent = function () {
                                     {
                                         lat = messageAttachments[0].payload.coordinates.lat;
                                         long = messageAttachments[0].payload.coordinates.long;
-                                        console.log("location :" + lat +" "+long);
-                                       // this.location.lat = lat ; 
-                                       // this.location.long = long; 
-                                       // this.getPlace(); 
                                     }
-                                   
+                                    console.log("attachments  :lat = "+lat+" long = "+long);
 
                         } else if (webhook_event.postback) {
                             handlePostback(sender_psid, webhook_event.postback);
