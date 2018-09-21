@@ -58,6 +58,17 @@ var process = exports.process = function (_Intent) {
         value: function onInit() {
            return this.use(this.res).end();
         }
+    },{
+        key: 'onInitPlace',
+        value: function onInitPlace() {
+           return this.use(this.resPlace).end();
+        }
+    },{
+        key: 'resPlace',
+        value: function resPlace() {
+          conaole.log("location : "+this.location.lat);
+          var place = serviceResponse.callGetPlace();
+        }
     },  {
         key: 'res',
         value:async function res() {
@@ -256,7 +267,7 @@ var process = exports.process = function (_Intent) {
 
                                     let serviceResponse =  new _services.responseMessenger(this.app);
                                    serviceResponse.callSendAPI('/messages',request_body, () => {});
-                                   serviceResponse.callGetPlace();
+                                   var place = serviceResponse.callGetPlace();
                                                         
                         }
                               
