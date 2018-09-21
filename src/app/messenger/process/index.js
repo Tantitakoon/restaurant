@@ -62,7 +62,8 @@ var process = exports.process = function (_Intent) {
         key: 'getLocation',
         value: function getLocation() {
              let serviceResponse =  new _services.responseMessenger(this.app);
-             serviceResponse.callGetPlace();
+             let nearbyPlace = serviceResponse.callGetPlace();
+             console.log(nearbyPlace);
         }
     }, {
         key: 'res',
