@@ -202,7 +202,7 @@ var Intent = exports.Intent = function () {
                                         long = messageAttachments[0].payload.coordinates.long;
                                         this.location.lat = lat ; 
                                         this.location.long = long ; 
-                                        return this.onInitPlace(this.location);
+                                        return this.getLocation(this.location);
                                 
                                     }
                                  
