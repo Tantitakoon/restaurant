@@ -199,11 +199,13 @@ var Intent = exports.Intent = function () {
                                     {
                                         lat = messageAttachments[0].payload.coordinates.lat;
                                         long = messageAttachments[0].payload.coordinates.long;
+                                        console.log(lat +" , "+ long);
                                         this.location.lat = lat ;
-                                        this.location.long = long ; 
+                                        this.location.long = long ;
+                                        console.log("attachments  :lat = "+ this.location.lat+" long = "+this.location.long); 
                                 
                                     }
-                                    console.log("attachments  :lat = "+ this.location.lat+" long = "+this.location.long);
+                                 
 
                         } else if (webhook_event.postback) {
                             handlePostback(sender_psid, webhook_event.postback);
