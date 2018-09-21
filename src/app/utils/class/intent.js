@@ -67,7 +67,7 @@ var Intent = exports.Intent = function () {
          }
          this.callWebhook = this.callWebhook.bind(this);
          this._ = this._.bind(this);
-         this.getLocation = this._.bind(this);
+         this.getLocation = this.getLocation.bind(this);
          this.app.post('/webhook',this.callWebhook);
          this.app.get('/webhook',this.callGetWebhook);
     }
