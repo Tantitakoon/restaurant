@@ -60,10 +60,10 @@ var process = exports.process = function (_Intent) {
         }
     }, {
         key: 'getLocation',
-        value: function getLocation() {
+        value:async function getLocation() {
              let serviceResponse =  new _services.responseMessenger(this.app);
-             console.log(serviceResponse.callGetPlace());
-            
+             let nearbyPlace = await serviceResponse.callGetPlace();
+             console.log("nearbyPlace : " +nearbyPlace);
         }
     }, {
         key: 'res',
