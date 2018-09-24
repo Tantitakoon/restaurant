@@ -236,10 +236,10 @@ var process = exports.process = function (_Intent) {
                             //serviceResponse.callSendAPI('/messages',this.rich.MessengerBasic, () => {});
 
                             //===================================test===========================
-
-                             
-                                  var response = {  
-                                          "message":{
+                                       
+                              console.log("==================TEST+=======================");
+                                  let response = {  
+                                   
                                                     "text": "Here is a quick reply!",
                                                     "quick_replies":[
                                                         {
@@ -253,7 +253,7 @@ var process = exports.process = function (_Intent) {
                                                         }
                                                     ]
                                                 }
-                                          }
+                                          
                              
 
                             //  let response = {
