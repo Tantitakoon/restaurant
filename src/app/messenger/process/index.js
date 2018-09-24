@@ -98,7 +98,7 @@ var process = exports.process = function (_Intent) {
                             break;
                         case 'ir':
                              console.info("in ir intent");
-                             //conv.ask("Ir");
+                             conv.ask("Ir");
                              console.log('ir');
                              break;
                         case 'ontop':
@@ -116,9 +116,9 @@ var process = exports.process = function (_Intent) {
                                      serviceResponse.callSendAPI('/messages', this.rich.BasicCard, () => {});
                                     }
                               else{
-                                //text = replyDisplay(messageDataObj);
+                                text = replyDisplay(messageDataObj);
                                     responseReply = this.createSuggest(messageDataObj);
-                                 //conv.ask(this.TEXT.SERVICE_ERROR);
+                                 conv.ask(this.TEXT.SERVICE_ERROR);
                               }
                             break;
                         case 'authenticate':
@@ -126,13 +126,13 @@ var process = exports.process = function (_Intent) {
                         case 'transfer':
                               console.info("in transfer intent");
                               text = "transfer";
-                              //this.rich["PassThreadControl"] = Rich["PassThreadControl"](this.data.sender_psid,_constants.ENV.APP_ID_2);
+                              this.rich["PassThreadControl"] = Rich["PassThreadControl"](this.data.sender_psid,_constants.ENV.APP_ID_2);
                               this.rich["TakeThreadControl"] = Rich["TakeThreadControl"](this.data.sender_psid);
 
                               let serviceResponse =  new _services.responseMessenger(this.app);
-                              //await serviceResponse.callSendAPI('/pass_thread_control', this.rich.PassThreadControl, () => {});
+                              await serviceResponse.callSendAPI('/pass_thread_control', this.rich.PassThreadControl, () => {});
                               await serviceResponse.callSendAPI('/permissions', this.rich.TakeThreadControl, () => {});
-                              //passThreadControl(sender_psid,_constants.ENV.APP_ID_2);
+                              passThreadControl(sender_psid,_constants.ENV.APP_ID_2);
                             break;
                         default:
                             console.info("in default switch case");
@@ -140,7 +140,7 @@ var process = exports.process = function (_Intent) {
                             break;
                     }
                 }else{
-                    //conv.ask("Error Something wrong");
+                    conv.ask("Error Something wrong");
                 }
 
 
@@ -236,22 +236,42 @@ var process = exports.process = function (_Intent) {
                             //serviceResponse.callSendAPI('/messages',this.rich.MessengerBasic, () => {});
 
                             //===================================test===========================
-                             let response = {
-                                    attachment: {
-                                        type: "template",
-                                        payload: {
-                                            template_type: "button",
-                                            text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
-                                            buttons: [{
-                                                type: "web_url",
-                                                url: "https://chatbotboom.herokuapp.com/messengerView",
-                                                title: "Set preferences",
-                                                webview_height_ratio: "tall",
-                                                messenger_extensions: false
-                                            }]
-                                        }
-                                    }
-                                };
+
+                             
+                                  var response = {  
+                                          "message":{
+                                                    "text": "Here is a quick reply!",
+                                                    "quick_replies":[
+                                                        {
+                                                            "content_type":"text",
+                                                            "title":"Search",
+                                                            "payload":"<POSTBACK_PAYLOAD>",
+                                                            "image_url":"http://example.com/img/red.png"
+                                                        },
+                                                        {
+                                                            "content_type":"location"
+                                                        }
+                                                    ]
+                                                }
+                                          }
+                             
+
+                            //  let response = {
+                            //         attachment: {
+                            //             type: "template",
+                            //             payload: {
+                            //                 template_type: "button",
+                            //                 text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
+                            //                 buttons: [{
+                            //                     type: "web_url",
+                            //                     url: "https://chatbotboom.herokuapp.com/messengerView",
+                            //                     title: "Set preferences",
+                            //                     webview_height_ratio: "tall",
+                            //                     messenger_extensions: false
+                            //                 }]
+                            //             }
+                            //         }
+                            //     };
 
 
                                  let request_body = {
@@ -263,7 +283,7 @@ var process = exports.process = function (_Intent) {
 
                                     let serviceResponse =  new _services.responseMessenger(this.app);
                                    serviceResponse.callSendAPI('/messages',request_body, () => {});
-                                   serviceResponse.callGetPlace();
+                                 
                                                         
                         }
                               
