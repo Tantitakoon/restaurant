@@ -72,7 +72,7 @@ var process = exports.process = function (_Intent) {
                                         payload: {
                                             template_type: "list",
                                             top_element_style: "compact",
-                                             elements: 
+                                             elements: [
                                              {
                                                 title: "Classic T-Shirt Collection",
                                                 subtitle: "See all our colors",
@@ -87,7 +87,7 @@ var process = exports.process = function (_Intent) {
                                                     fallback_url: "https://peterssendreceiveapp.ngrok.io/"            
                                                 }
                                                 ]
-                                             },
+                                             }],
                                             buttons: [{
                                                 type: "web_url",
                                                 url: "https://chatbotboom.herokuapp.com/messengerView",
