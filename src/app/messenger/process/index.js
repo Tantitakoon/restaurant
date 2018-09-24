@@ -60,7 +60,8 @@ var process = exports.process = function (_Intent) {
         }
     }, {
         key: 'getLocation',
-        value:async function getLocation() {
+        value:async function getLocation(location,sender_psid) {
+            console.log("sender_psid "+sender_psid);
              let serviceResponse =  new _services.responseMessenger(this.app);
              let nearbyPlace = await serviceResponse.callGetPlace();
              console.log("nearbyPlace : " +nearbyPlace.data[0].name);
@@ -135,7 +136,7 @@ var process = exports.process = function (_Intent) {
 
                 let request_body = {
                     "recipient": {
-                      "id": this.data.sender_psid
+                      "id": sender_psid
                      },
                       "message": response
                 };
