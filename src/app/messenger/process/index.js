@@ -65,17 +65,15 @@ var process = exports.process = function (_Intent) {
              let serviceResponse =  new _services.responseMessenger(this.app);
              let nearbyPlace = await serviceResponse.callGetPlace();
              console.log("nearbyPlace : " +nearbyPlace.data[0].name);
-                   var response= {
-  "recipient":{
-    "id":sender_psid
-  }, 
-  "message": {
+                var response= {
+ 
+ 
     "attachment": {
       "type": "template",
       "payload": {
         "template_type": "list",
         "top_element_style": "compact",
-        "elements": [
+        "quick_replies": [
           {
             "title": "Classic T-Shirt Collection",
             "subtitle": "See all our colors",
@@ -133,8 +131,9 @@ var process = exports.process = function (_Intent) {
         ]  
       }
     }
-  }
+  
 }
+                 
                  
                 let request_body = {
                     "recipient": {
@@ -143,7 +142,7 @@ var process = exports.process = function (_Intent) {
                       "message": response
                       
                 };
-                serviceResponse.callSendAPI('/messages',response, () => {}); 
+                serviceResponse.callSendAPI('/messages',request_body, () => {}); 
 
                 
         }
@@ -349,7 +348,7 @@ var process = exports.process = function (_Intent) {
                             //             }
                             //         }
                             //     };
-
+                                  
 
                                  let request_body = {
                                     "recipient": {
