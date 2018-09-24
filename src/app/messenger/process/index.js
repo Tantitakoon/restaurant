@@ -79,17 +79,17 @@ var process = exports.process = function (_Intent) {
                                              {
                                                 title: "Classic T-Shirt Collection",
                                                 subtitle: "See all our colors",
-                                                image_url: "https://scontent.xx.fbcdn.net/v/t1.0-1/c1.0.50.50/p50x50/10645025_758268484219520_6811951924776374550_n.jpg?_nc_cat=101&oh=6be0c983f2f5307ccb82caea1204293d&oe=5C29187B"     
-                                                // buttons: [
-                                                // {
-                                                //     title: "View",
-                                                //     type: "web_url",
-                                                //     url: "https://peterssendreceiveapp.ngrok.io/collection",
-                                                //     messenger_extensions: true,
-                                                //     webview_height_ratio: "tall",
-                                                //     fallback_url: "https://peterssendreceiveapp.ngrok.io/"            
-                                                // }
-                                                // ]
+                                               // image_url: "https://scontent.xx.fbcdn.net/v/t1.0-1/c1.0.50.50/p50x50/10645025_758268484219520_6811951924776374550_n.jpg?_nc_cat=101&oh=6be0c983f2f5307ccb82caea1204293d&oe=5C29187B",          
+                                                buttons: [
+                                                {
+                                                    title: "View",
+                                                    type: "web_url",
+                                                    url: "https://peterssendreceiveapp.ngrok.io/collection",
+                                                    messenger_extensions: true,
+                                                    webview_height_ratio: "tall",
+                                                    fallback_url: "https://peterssendreceiveapp.ngrok.io/"            
+                                                }
+                                                ]
                                              }],
                                             buttons: [{
                                                 type: "web_url",
