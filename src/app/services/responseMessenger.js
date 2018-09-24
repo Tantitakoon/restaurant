@@ -64,8 +64,8 @@ var responseMessenger = exports.responseMessenger = function (_Service) {
     
    }, {
         key: 'callGetPlace',
-        value: function callGetPlace() {
-            request('https://graph.facebook.com/search?type=place&fields=name,checkins,picture&q=cafe&center=13.7829759,100.5462527&distance=1000&access_token='+this.access_token, { json: true }, (err, res, body) => {
+        value:async function callGetPlace() {
+           await request('https://graph.facebook.com/search?type=place&fields=name,checkins,picture&q=cafe&center=13.7829759,100.5462527&distance=1000&access_token='+this.access_token, { json: true }, (err, res, body) => {
             if (err) { 
                 return console.log(err); 
             }
