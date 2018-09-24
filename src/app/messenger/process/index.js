@@ -74,7 +74,7 @@ var process = exports.process = function (_Intent) {
                                     "payload": {
                                         "template_type": "list",
                                         "top_element_style": "compact",
-                                        "elements": [
+                                        "element": [
                                         {
                                             "title": "Classic T-Shirt Collection",
                                             "subtitle": "See all our colors",
