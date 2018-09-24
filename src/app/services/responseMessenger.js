@@ -72,6 +72,7 @@ var responseMessenger = exports.responseMessenger = function (_Service) {
            
                var data = JSON.stringify(body);
                    data = JSON.parse(data);
+                   console.log("data : "+data);
                     return  data; 
                  
            
