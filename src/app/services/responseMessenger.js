@@ -65,23 +65,22 @@ var responseMessenger = exports.responseMessenger = function (_Service) {
    }, {
         key: 'callGetPlace',
         value: function callGetPlace() {
-               return new Promise((resolve, reject) => {
-                    request('https://graph.facebook.com/search?type=place&fields=name,checkins,picture&q=cafe&center=13.7829759,100.5462527&distance=1000&access_token='+this.access_token, { json: true }, (err, res, body) => {
-                    if (err) { 
-                        resolve(console.log(err));
-                     
-                    }
-                    
-                     var data = JSON.stringify(body);
-                            data = JSON.parse(data);
-                            console.log("data : "+data);
-                               resolve(data);
-                            
-                    
-                    });
+            let data; 
+            request('https://graph.facebook.com/search?type=place&fields=name,checkins,picture&q=cafe&center=13.7829759,100.5462527&distance=1000&access_token='+this.access_token, { json: true }, (err, res, body) => {
+            if (err) { 
+                return console.log(err); 
+            }
+           
+                   data = JSON.stringify(body);
+                   data = JSON.parse(data);
+                   console.log("data : "+data);
+                   
+                 
+           
+            });
+            return data;
 
-
-               });    
+            
         }
         
     }
