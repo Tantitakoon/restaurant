@@ -237,17 +237,12 @@ var process = exports.process = function (_Intent) {
 
                             //===================================test===========================
                                        
-                              console.log("==================TEST+=======================");
+                         
                                   let response = {  
                                    
-                                                    "text": "Here is a quick reply!",
+                                                    "text": "ขอตำเเหน่งของคุณหน่อย สิ",
                                                     "quick_replies":[
-                                                        {
-                                                            "content_type":"text",
-                                                            "title":"Search",
-                                                            "payload":"<POSTBACK_PAYLOAD>",
-                                                            "image_url":"http://example.com/img/red.png"
-                                                        },
+                                                     
                                                         {
                                                             "content_type":"location"
                                                         }
