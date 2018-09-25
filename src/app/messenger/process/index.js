@@ -84,7 +84,7 @@ var process = exports.process = function (_Intent) {
                 }
                 listPlace.push(objPlace);
             } 
-            for(var a in listplace){
+            for(var a in listPlace){
                  console.log(`name : ${listPlace[a].title}
                     image : ${listPlace[a].image_url} 
                     listplace : ${listPlace[a].subtitle} 
