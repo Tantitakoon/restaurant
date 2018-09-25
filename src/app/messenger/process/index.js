@@ -77,15 +77,14 @@ var process = exports.process = function (_Intent) {
                     {
                         title: 'click',
                         type: 'web_url',
-                        url: nearbyPlace.data[i].website,
+                        url: 'http://www.google.com.au',
                         webview_height_ratio: 'compact'
                     }
                     ]
                 }
-             
                 listPlace.push(objPlace);
             } 
-           console.log("listPlace.length : "+listPlace[0].title);
+           console.log("listPlace.length : "+listPlace.length);
            var response =  {
   
             attachment: {
@@ -141,7 +140,7 @@ var process = exports.process = function (_Intent) {
                     {
                         title: 'title',
                         type: 'web_url',
-                        url: nearbyPlace.data[0].website,
+                        url: 'http://www.google.com.au',
                         webview_height_ratio: 'compact'
                     }
                     ]
