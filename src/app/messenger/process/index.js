@@ -82,7 +82,7 @@ var process = exports.process = function (_Intent) {
                         }
                     ]
                 }
-                listPlace[i]=(objPlace);
+                listPlace.push(objPlace);
             } 
            console.log("listPlace.length : "+listPlace.length);
            var response =  {
@@ -94,90 +94,6 @@ var process = exports.process = function (_Intent) {
                 top_element_style: "compact",
                 elements: [
                 {
-                    title:  nearbyPlace.data[0].name,
-                    image_url: nearbyPlace.data[0].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'click',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },{
-                    title:  nearbyPlace.data[0].name,
-                    image_url: nearbyPlace.data[0].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'click',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },{
-                    title:  nearbyPlace.data[0].name,
-                    image_url: nearbyPlace.data[0].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'click',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },{
-                    title:  nearbyPlace.data[0].name,
-                    image_url: nearbyPlace.data[0].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'click',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },{
-                    title:  nearbyPlace.data[0].name,
-                    image_url: nearbyPlace.data[0].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'click',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },{
-                    title:  nearbyPlace.data[0].name,
-                    image_url: nearbyPlace.data[0].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'click',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },{
-                    title:  nearbyPlace.data[0].name,
-                    image_url: nearbyPlace.data[0].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'click',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },{
                     title:  nearbyPlace.data[0].name,
                     image_url: nearbyPlace.data[0].picture.data.url,
                     subtitle: 'subtitle subtitle subtitle',
