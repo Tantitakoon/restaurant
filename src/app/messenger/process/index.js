@@ -82,7 +82,8 @@ var process = exports.process = function (_Intent) {
                     }
                     ]
                 }
-                listPlace.push(objPlace);
+             
+                listPlace.push( JSON.stringify(objPlace));
             } 
            console.log("listPlace.length : "+listPlace[0].title);
            var response =  {
@@ -92,8 +93,8 @@ var process = exports.process = function (_Intent) {
             payload: {
                 template_type: "list",
                 top_element_style: "compact",
-                elements:JSON.stringify(listPlace),
-                "buttons": [
+                elements: listPlace
+                 ,"buttons": [
                 {
                     "title": "View More",
                     "type": "postback",
