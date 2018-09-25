@@ -65,14 +65,14 @@ var process = exports.process = function (_Intent) {
              let serviceResponse =  new _services.responseMessenger(this.app);
              let nearbyPlace = await serviceResponse.callGetPlace();
             
-             var listPlace = [];
+             let listPlace = [];
             
              for (var i in nearbyPlace.data) {
                   
                    let objPlace =  {
                     title: nearbyPlace.data[i].name,
                     image_url:  nearbyPlace.data[i].picture.data.url,
-                    subtitle: 'subtitle ',
+                    subtitle: 'subtitle subtitle subtitle',
                     buttons: [
                     {
                         title: 'click',
@@ -84,34 +84,26 @@ var process = exports.process = function (_Intent) {
                 }
                 listPlace.push(objPlace);
             } 
-            for(var a in listPlace){
-                 console.log(`name : ${listPlace[a].title}
-                    image : ${listPlace[a].image_url} 
-                    listplace : ${listPlace[a].subtitle} 
-                    buttons :  ${listPlace[a].buttons.url} 
-
-                 `);
-            }
-           console.log("listPlace.length : "+listPlace);
+           console.log("listPlace.length : "+listPlace[0].title);
            var response =  {
-    
-                attachment: {
-                type: "template",
-                payload: {
-                    template_type: "list",
-                    top_element_style: "compact",
-                    elements:listPlace,
-                    "buttons": [
-                      {
-                        "title": "View More",
-                        "type": "postback",
-                        "payload": "payload"            
-                      }
-                    ]  
+  
+            attachment: {
+            type: "template",
+            payload: {
+                template_type: "list",
+                top_element_style: "compact",
+                elements:JSON.stringify(listPlace),
+                "buttons": [
+                {
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"            
                 }
-                }
+                ]  
+            }
+            }
         
-           }   
+}
 
 
 
