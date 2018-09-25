@@ -92,7 +92,7 @@ var process = exports.process = function (_Intent) {
             payload: {
                 template_type: "list",
                 top_element_style: "compact",
-                elements: listPlace,
+                elements: [listPlace],
                 "buttons": [
                 {
                     "title": "View More",
