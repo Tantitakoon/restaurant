@@ -68,100 +68,48 @@ var process = exports.process = function (_Intent) {
 
            var response =  {
   
-                attachment: {
-                type: "template",
-                payload: {
-                    template_type: "list",
-                    top_element_style: "compact",
-                    elements: [
+            attachment: {
+            type: "template",
+            payload: {
+                template_type: "list",
+                top_element_style: "compact",
+                elements: [
+                {
+                    title: 'title',
+                    image_url: null,
+                    subtitle: 'subtitle subtitle subtitle',
+                    buttons: [
                     {
                         title: 'title',
-                        image_url: null,
-                        subtitle: 'subtitle subtitle subtitle',
-                        buttons: [
-                        {
-                            title: 'title',
-                            type: 'web_url',
-                            url: 'http://www.google.com.au',
-                            webview_height_ratio: 'compact'
-                        }
-                        ]
-                    },
-                    {
-                        title: 'title',
-                        image_url: null,
-                        subtitle: 'subtitle subtitle subtitle',
-                        buttons: [
-                        {
-                            title: 'title',
-                            type: 'web_url',
-                            url: 'http://www.google.com.au',
-                            webview_height_ratio: 'compact'
-                        }
-                        ]
-                    },
-                    {
-                        title: 'title',
-                        image_url: null,
-                        subtitle: 'subtitle subtitle subtitle',
-                        buttons: [
-                        {
-                            title: 'title',
-                            type: 'web_url',
-                            url: 'http://www.google.com.au',
-                            webview_height_ratio: 'compact'
-                        }
-                        ]
-                    },
-                    {
-                        title: 'title',
-                        image_url: null,
-                        subtitle: 'subtitle subtitle subtitle',
-                        buttons: [
-                        {
-                            title: 'title',
-                            type: 'web_url',
-                            url: 'http://www.google.com.au',
-                            webview_height_ratio: 'compact'
-                        }
-                        ]
-                    },
-                    {
-                        title: 'title',
-                        image_url: null,
-                        subtitle: 'subtitle subtitle subtitle',
-                        buttons: [
-                        {
-                            title: 'title',
-                            type: 'web_url',
-                            url: 'http://www.google.com.au',
-                            webview_height_ratio: 'compact'
-                        }
-                        ]
-                    },
-                    {
-                        title: 'title',
-                        image_url: null,
-                        subtitle: 'subtitle subtitle subtitle',
-                        buttons: [
-                        {
-                            title: 'title',
-                            type: 'web_url',
-                            url: 'http://www.google.com.au',
-                            webview_height_ratio: 'compact'
-                        }
-                        ]
+                        type: 'web_url',
+                        url: 'http://www.google.com.au',
+                        webview_height_ratio: 'compact'
                     }
-                    ],"buttons": [
+                    ]
+                },
+                {
+                    title: 'title',
+                    image_url: null,
+                    subtitle: 'subtitle subtitle subtitle',
+                    buttons: [
                     {
-                        "title": "View More",
-                        "type": "postback",
-                        "payload": "payload"            
+                        title: 'title',
+                        type: 'web_url',
+                        url: 'http://www.google.com.au',
+                        webview_height_ratio: 'compact'
                     }
-                    ]  
+                    ]
                 }
+                ],"buttons": [
+                {
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"            
                 }
-            
+                ]  
+            }
+            }
+        
 }
 
 
