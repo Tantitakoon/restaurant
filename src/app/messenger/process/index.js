@@ -84,7 +84,7 @@ var process = exports.process = function (_Intent) {
                 }
                 listPlace.push(objPlace);
             } 
-           console.log("listPlace.length : "+listPlace.length);
+           console.log("listPlace.length : "+listPlace);
            var response =  {
     
                 attachment: {
