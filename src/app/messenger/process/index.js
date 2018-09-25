@@ -100,7 +100,13 @@ var process = exports.process = function (_Intent) {
               }
             ]
           }
-        ]
+        ],"buttons": [
+          {
+            "title": "View More",
+            "type": "postback",
+            "payload": "payload"            
+          }
+        ]  
       }
     }
   
