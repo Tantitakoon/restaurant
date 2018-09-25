@@ -68,17 +68,16 @@ var process = exports.process = function (_Intent) {
              let listPlace = [];
             
              for (var i in nearbyPlace.data) {
-                 console.log(" nearbyPlace.data[i].website : "+nearbyPlace.data[i].website);
                   
                    let objPlace =  {
                     title: nearbyPlace.data[i].name,
                     image_url:  nearbyPlace.data[i].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
+                    subtitle: '',
                     buttons: [
                         {
                             title: 'click',
                             type: 'web_url',
-                            url: nearbyPlace.data[i].website,
+                            url: 'http://www.google.com.au',
                             webview_height_ratio: 'compact'
                         }
                     ]
