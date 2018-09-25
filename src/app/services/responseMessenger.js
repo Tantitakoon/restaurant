@@ -66,7 +66,7 @@ var responseMessenger = exports.responseMessenger = function (_Service) {
         key: 'callGetPlace',
         value: function callGetPlace() {
                return new Promise((resolve, reject) => {
-               request('https://graph.facebook.com/search?type=place&fields=name,checkins,picture&q=cafe&center=13.7829759,100.5462527&distance=1000&access_token='+this.access_token, { json: true }, (err, res, body) => {
+               request('https://graph.facebook.com/search?type=place&fields=name,checkins,picture,website&q=cafe&center=13.7829759,100.5462527&distance=1000&access_token='+this.access_token, { json: true }, (err, res, body) => {
                     if (err) { 
                         resolve( console.log(err)); 
                     }
