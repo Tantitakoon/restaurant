@@ -101,7 +101,7 @@ var process = exports.process = function (_Intent) {
                     {
                         title: 'click',
                         type: 'web_url',
-                        url: nearbyPlace.data[0].website,
+                        url: 'http://www.google.com.au',
                         webview_height_ratio: 'compact'
                     }
                     ]
@@ -114,7 +114,7 @@ var process = exports.process = function (_Intent) {
                     {
                         title: 'title',
                         type: 'web_url',
-                        url: nearbyPlace.data[0].website,
+                        url: 'http://www.google.com.au',
                         webview_height_ratio: 'compact'
                     }
                     ]
@@ -127,7 +127,7 @@ var process = exports.process = function (_Intent) {
                     {
                         title: 'title',
                         type: 'web_url',
-                        url: nearbyPlace.data[0].website,
+                        url: 'http://www.google.com.au',
                         webview_height_ratio: 'compact'
                     }
                     ]
