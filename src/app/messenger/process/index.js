@@ -72,12 +72,12 @@ var process = exports.process = function (_Intent) {
                    let objPlace =  {
                     title: nearbyPlace.data[i].name,
                     image_url:  nearbyPlace.data[i].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
+                    subtitle: '',
                     buttons: [
                         {
-                            title: 'click',
+                            title: 'คลิก',
                             type: 'web_url',
-                            url: 'http://www.google.com.au',
+                            url:  nearbyPlace.data[i].website,
                             webview_height_ratio: 'compact'
                         }
                     ]
@@ -94,7 +94,8 @@ var process = exports.process = function (_Intent) {
             payload: {
                 template_type: "list",
                 top_element_style: "compact",
-                elements: listPlace,"buttons": [
+                elements: listPlace,
+                "buttons": [
                 {
                     "title": "View More",
                     "type": "postback",
