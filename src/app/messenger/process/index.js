@@ -82,7 +82,8 @@ var process = exports.process = function (_Intent) {
                         }
                     ]
                 }
-                listPlace[i]=(objPlace);
+                listPlace.push(objPlace);
+                
             } 
            console.log("listPlace.length : "+listPlace.length);
            var response =  {
@@ -92,7 +93,7 @@ var process = exports.process = function (_Intent) {
             payload: {
                 template_type: "list",
                 top_element_style: "compact",
-                elements: [listPlace],
+                elements: JSON.parse(listPlace),
                 "buttons": [
                 {
                     "title": "View More",
