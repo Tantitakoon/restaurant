@@ -77,7 +77,7 @@ var process = exports.process = function (_Intent) {
                         {
                             title: 'click',
                             type: 'web_url',
-                            url: 'http://www.google.com.au',
+                            url: nearbyPlace.data[i].website,
                             webview_height_ratio: 'compact'
                         }
                     ]
