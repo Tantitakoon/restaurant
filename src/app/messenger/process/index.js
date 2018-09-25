@@ -83,7 +83,7 @@ var process = exports.process = function (_Intent) {
                 "title": "View",
                 "type": "web_url",
                 "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                "messenger_extensions": "TRUE" ,
+               
                 "webview_height_ratio": "TALL",
                 "fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
               }
@@ -95,7 +95,7 @@ var process = exports.process = function (_Intent) {
             "default_action": {
               "type": "web_url",
               "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
-              "messenger_extensions": "FALSE",
+             
               "webview_height_ratio": "TALL"
             }
           },
@@ -106,7 +106,7 @@ var process = exports.process = function (_Intent) {
             "default_action": {
               "type": "web_url",
               "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
-              "messenger_extensions": "TRUE" ,
+             
               "webview_height_ratio": "tall",
               "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
             },
@@ -115,7 +115,7 @@ var process = exports.process = function (_Intent) {
                 "title": "Shop Now",
                 "type": "web_url",
                 "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
-                "messenger_extensions": "TRUE",
+                
                 "webview_height_ratio": "tall",
                 "fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
               }
