@@ -109,7 +109,7 @@ var process = exports.process = function (_Intent) {
         
         //   }
 
-        {
+        //{
       var response = {"attachment":{
         "type":"template",
         "payload":{
