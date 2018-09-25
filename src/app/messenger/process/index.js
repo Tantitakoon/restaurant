@@ -66,7 +66,7 @@ var process = exports.process = function (_Intent) {
              let nearbyPlace = await serviceResponse.callGetPlace();
              console.log("nearbyPlace : " +nearbyPlace.data[0].name);
              for (var i in nearbyPlace.data) {
-                   console.log(nearbyPlace[i].name);
+                   console.log(nearbyPlace.data[i].name);
             } 
 
            var response =  {
