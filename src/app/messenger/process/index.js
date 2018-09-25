@@ -121,6 +121,19 @@ var process = exports.process = function (_Intent) {
                 },
                 {
                     title: 'title',
+                    image_url: nearbyPlace.data[1].picture.data.url,
+                    subtitle: 'subtitle subtitle subtitle',
+                    buttons: [
+                    {
+                        title: 'title',
+                        type: 'web_url',
+                        url: 'http://www.google.com.au',
+                        webview_height_ratio: 'compact'
+                    }
+                    ]
+                },
+                {
+                    title: 'title',
                     image_url: nearbyPlace.data[2].picture.data.url,
                     subtitle: 'subtitle subtitle subtitle',
                     buttons: [
