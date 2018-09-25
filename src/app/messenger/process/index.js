@@ -64,9 +64,25 @@ var process = exports.process = function (_Intent) {
             console.log("sender_psid "+sender_psid);
              let serviceResponse =  new _services.responseMessenger(this.app);
              let nearbyPlace = await serviceResponse.callGetPlace();
-             console.log("nearbyPlace : " +nearbyPlace.data[0].name);
+            
+             let listPlace = [];
+            
              for (var i in nearbyPlace.data) {
-                   console.log(nearbyPlace.data[i].name);
+                  
+                   let objPlace =  {
+                    title: nearbyPlace.data[i].name,
+                    image_url:  nearbyPlace.data[i].picture.data.url,
+                    subtitle: 'subtitle subtitle subtitle',
+                    buttons: [
+                    {
+                        title: 'click',
+                        type: 'web_url',
+                        url: 'http://www.google.com.au',
+                        webview_height_ratio: 'compact'
+                    }
+                    ]
+                }
+                listPlace.push(objPlace);
             } 
 
            var response =  {
@@ -76,60 +92,8 @@ var process = exports.process = function (_Intent) {
             payload: {
                 template_type: "list",
                 top_element_style: "compact",
-                elements: [
-                {
-                    title: 'title',
-                    image_url: null,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'title',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },
-                {
-                    title: 'title',
-                    image_url: null,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'title',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },
-                {
-                    title: 'title',
-                    image_url: null,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'title',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                },
-                {
-                    title: 'title',
-                    image_url: null,
-                    subtitle: 'subtitle subtitle subtitle',
-                    buttons: [
-                    {
-                        title: 'title',
-                        type: 'web_url',
-                        url: 'http://www.google.com.au',
-                        webview_height_ratio: 'compact'
-                    }
-                    ]
-                }
-                ],"buttons": [
+                elements:listPlace
+                ,"buttons": [
                 {
                     "title": "View More",
                     "type": "postback",
