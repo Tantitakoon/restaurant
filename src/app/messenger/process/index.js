@@ -85,7 +85,7 @@ var process = exports.process = function (_Intent) {
                 listPlace.push(objPlace);
                 
             } 
-           console.log("listPlace.length : "+listPlace.length);
+           console.log("listPlace.length : "+JSON.stringify(listPlace));
            var response =  {
   
             attachment: {
@@ -93,7 +93,7 @@ var process = exports.process = function (_Intent) {
             payload: {
                 template_type: "list",
                 top_element_style: "compact",
-                elements: JSON.parse(listPlace),
+                elements: JSON.stringify(listPlace),
                 "buttons": [
                 {
                     "title": "View More",
