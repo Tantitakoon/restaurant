@@ -72,7 +72,7 @@ var process = exports.process = function (_Intent) {
                    let objPlace =  {
                     title: nearbyPlace.data[i].name,
                     image_url:  nearbyPlace.data[i].picture.data.url,
-                    subtitle: 'subtitle subtitle subtitle',
+                    subtitle: 'subtitle ',
                     buttons: [
                     {
                         title: 'click',
@@ -84,6 +84,14 @@ var process = exports.process = function (_Intent) {
                 }
                 listPlace.push(objPlace);
             } 
+            for(var a in listplace){
+                 console.log(`name : ${listPlace[a].title}
+                    image : ${listPlace[a].image_url} 
+                    listplace : ${listPlace[a].subtitle} 
+                    buttons :  ${listPlace[a].buttons.url} 
+
+                 `);
+            }
            console.log("listPlace.length : "+listPlace);
            var response =  {
     
