@@ -68,6 +68,7 @@ var process = exports.process = function (_Intent) {
              let listPlace = [];
             
              for (var i in nearbyPlace.data) {
+                 console.log(" nearbyPlace.data[i].website : "+nearbyPlace.data[i].website);
                   
                    let objPlace =  {
                     title: nearbyPlace.data[i].name,
