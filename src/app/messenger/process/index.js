@@ -84,7 +84,7 @@ var process = exports.process = function (_Intent) {
                 }
                 listPlace.push(objPlace);
             } 
-
+           console.log("listPlace.length : "+listPlace.length);
            var response =  {
   
             attachment: {
@@ -108,7 +108,7 @@ var process = exports.process = function (_Intent) {
                 },
                 {
                     title: 'title',
-                    image_url: null,
+                    image_url: nearbyPlace.data[1].picture.data.url,
                     subtitle: 'subtitle subtitle subtitle',
                     buttons: [
                     {
@@ -121,7 +121,7 @@ var process = exports.process = function (_Intent) {
                 },
                 {
                     title: 'title',
-                    image_url: null,
+                    image_url: nearbyPlace.data[2].picture.data.url,
                     subtitle: 'subtitle subtitle subtitle',
                     buttons: [
                     {
@@ -134,7 +134,7 @@ var process = exports.process = function (_Intent) {
                 },
                 {
                     title: 'title',
-                    image_url: null,
+                    image_url: nearbyPlace.data[3].picture.data.url,
                     subtitle: 'subtitle subtitle subtitle',
                     buttons: [
                     {
