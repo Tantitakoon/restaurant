@@ -83,7 +83,7 @@ var process = exports.process = function (_Intent) {
                     ]
                 }
                
-                if(i<6){
+                if(i<4){
                   listPlace.push(objPlace);
                 }
             } 
