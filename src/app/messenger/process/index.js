@@ -89,48 +89,25 @@ var process = exports.process = function (_Intent) {
                 }
             } 
            console.log("listPlace.length : "+listPlace.length);
-        //    var response =  {
+           var response =  {
   
-        //     attachment: {
-        //     type: "template",
-        //     payload: {
-        //         template_type: "list",
-        //         top_element_style: "compact",
-        //         elements: listPlace,
-        //         "buttons": [
-        //         {
-        //             "title": "View More",
-        //             "type": "postback",
-        //             "payload": "payload"            
-        //         }
-        //         ]  
-        //     }
-        //     }
-        
-        //   }
-
-        //{
-      var response = {"attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-             {
-              "title":"Welcome to Our Marketplace!",
-              "image_url":"https://www.facebook.com/jaspers.png",
-              "subtitle":"Fresh fruits and vegetables. Yum.",
-              "buttons":[
+            attachment: {
+            type: "template",
+            payload: {
+                template_type: "list",
+                top_element_style: "compact",
+                elements: listPlace,
+                "buttons": [
                 {
-                  "type":"web_url",
-                  "url":"https://www.jaspersmarket.com",
-                  "title":"View Website"
-                }              
-              ]      
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"            
+                }
+                ]  
             }
-          ]
-        }       
-      }
-    }
+            }
+        
+          }
 
 
 
