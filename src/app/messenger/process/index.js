@@ -302,7 +302,7 @@ var process = exports.process = function (_Intent) {
                                                 text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
                                               
                                                     type: "web_url",
-                                                    url: SERVER_URL + "/options",
+                                                    url: "http://whether.com/",
                                                     title: "Set preferences",
                                                     webview_height_ratio: "compact",
                                                     messenger_extensions: false
