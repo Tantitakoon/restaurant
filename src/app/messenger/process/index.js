@@ -294,18 +294,33 @@ var process = exports.process = function (_Intent) {
                             //serviceResponse.callSendAPI('/messages',this.rich.MessengerBasic, () => {});
 
                             //===================================test===========================
-                                       
+                                      let response =  {
+                                        attachment: {
+                                            type: "template",
+                                            payload: {
+                                                template_type: "button",
+                                                text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
+                                              
+                                                    type: "web_url",
+                                                    url: SERVER_URL + "/options",
+                                                    title: "Set preferences",
+                                                    webview_height_ratio: "compact",
+                                                    messenger_extensions: false
+                                                
+                                            }
+                                        }
+                                    }
                          
-                                  let response = {  
+                                //   let response = {  
                                    
-                                                    "text": "ขอตำเเหน่งของคุณหน่อย สิ",
-                                                    "quick_replies":[
+                                //                     "text": "ขอตำเเหน่งของคุณหน่อย สิ",
+                                //                     "quick_replies":[
                                                      
-                                                        {
-                                                            "content_type":"location"
-                                                        }
-                                                    ]
-                                                }
+                                //                         {
+                                //                             "content_type":"location"
+                                //                         }
+                                //                     ]
+                                //                 }
                                           
                              
 
