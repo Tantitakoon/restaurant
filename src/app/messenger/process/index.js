@@ -309,21 +309,21 @@ var process = exports.process = function (_Intent) {
 
 
                                   let response = {
-                                    attachment: {
-                                        type: "template",
-                                        payload: {
-                                            template_type: "button",
-                                            text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
-                                            buttons: [{
-                                                type: "web_url",
-                                                url: "https://www.google.com/search?q=%E0%B9%81%E0%B8%9B%E0%B8%A5&ie=utf-8&oe=utf-8&client=firefox-b-ab",
-                                                title: "Set preferences",
-                                                webview_height_ratio: "tall",
-                                                messenger_extensions: true
-                                            }]
+                                        attachment: {
+                                            type: "template",
+                                            payload: {
+                                                template_type: "button",
+                                                text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
+                                                buttons: [{
+                                                    type: "web_url",
+                                                    url: "https://blog.messengerdevelopers.com/using-the-webview-to-create-richer-bot-to-user-interactions-ed8a789523c6",
+                                                    title: "Set preferences",
+                                                    webview_height_ratio: "compact",
+                                                    messenger_extensions: false
+                                                }]
+                                            }
                                         }
-                                    }
-                                };
+                                    };
                                           
                              
 
