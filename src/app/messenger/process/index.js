@@ -319,7 +319,7 @@ var process = exports.process = function (_Intent) {
                                                     url: "https://blog.messengerdevelopers.com/using-the-webview-to-create-richer-bot-to-user-interactions-ed8a789523c6",
                                                     title: "Set preferences",
                                                     webview_height_ratio: "compact",
-                                                    messenger_extensions: false
+                                                    messenger_extensions: true
                                                 }]
                                             }
                                         }
