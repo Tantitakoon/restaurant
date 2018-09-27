@@ -308,26 +308,7 @@ var process = exports.process = function (_Intent) {
                                 //                 }
 
 
-                                //   let response = {
-                                //     attachment: {
-                                //         type: "template",
-                                //         payload: {
-                                //             template_type: "button",
-                                //             text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
-                                //             buttons: [{
-                                //                 type: "web_url",
-                                //                 url: "https://chatbotboom.herokuapp.com/messengerView",
-                                //                 title: "Set preferences",
-                                //                 webview_height_ratio: "tall",
-                                //                 messenger_extensions: true
-                                //             }]
-                                //         }
-                                //     }
-                                // };
-                                          
-                             
-
-                             let response = {
+                                  let response = {
                                     attachment: {
                                         type: "template",
                                         payload: {
@@ -335,7 +316,7 @@ var process = exports.process = function (_Intent) {
                                             text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
                                             buttons: [{
                                                 type: "web_url",
-                                                url: "https://chatbotboom.herokuapp.com/messengerView",
+                                                url: "https://www.google.com/search?q=%E0%B9%81%E0%B8%9B%E0%B8%A5&ie=utf-8&oe=utf-8&client=firefox-b-ab",
                                                 title: "Set preferences",
                                                 webview_height_ratio: "tall",
                                                 messenger_extensions: true
@@ -343,6 +324,10 @@ var process = exports.process = function (_Intent) {
                                         }
                                     }
                                 };
+                                          
+                             
+
+                            
 
                                  let request_body = {
                                     "recipient": {
