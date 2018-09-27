@@ -296,16 +296,16 @@ var process = exports.process = function (_Intent) {
                             //===================================test===========================
                                        
                          
-                                  let response = {  
+                                //   let response = {  
                                    
-                                                    "text": "ขอตำเเหน่งของคุณหน่อย สิ",
-                                                    "quick_replies":[
+                                //                     "text": "ขอตำเเหน่งของคุณหน่อย สิ",
+                                //                     "quick_replies":[
                                                      
-                                                        {
-                                                            "content_type":"location"
-                                                        }
-                                                    ]
-                                                }
+                                //                         {
+                                //                             "content_type":"location"
+                                //                         }
+                                //                     ]
+                                //                 }
 
 
                                 //   let response = {
@@ -327,23 +327,22 @@ var process = exports.process = function (_Intent) {
                                           
                              
 
-                            //  let response = {
-                            //         attachment: {
-                            //             type: "template",
-                            //             payload: {
-                            //                 template_type: "button",
-                            //                 text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
-                            //                 buttons: [{
-                            //                     type: "web_url",
-                            //                     url: "https://chatbotboom.herokuapp.com/messengerView",
-                            //                     title: "Set preferences",
-                            //                     webview_height_ratio: "tall",
-                            //                     messenger_extensions: false
-                            //                 }]
-                            //             }
-                            //         }
-                            //     };
-                                  
+                             let response = {
+                                    attachment: {
+                                        type: "template",
+                                        payload: {
+                                            template_type: "button",
+                                            text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
+                                            buttons: [{
+                                                type: "web_url",
+                                                url: "https://chatbotboom.herokuapp.com/messengerView",
+                                                title: "Set preferences",
+                                                webview_height_ratio: "tall",
+                                                messenger_extensions: true
+                                            }]
+                                        }
+                                    }
+                                };
 
                                  let request_body = {
                                     "recipient": {
