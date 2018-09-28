@@ -24,7 +24,7 @@ getLocation();
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-      
+          document.getElementById("A").innerHTML = "getLocation!";
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
  
@@ -43,6 +43,7 @@ function showPosition(position) {
       
 }
 function initialize() {
+    document.getElementById("A").innerHTML = "initialize!";
   var pyrmont = new google.maps.LatLng( this.position.lat, this.position.long);
   map = new google.maps.Map({
       center: pyrmont,
@@ -61,7 +62,7 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
        var place = results[i];
        console.log(JSON.stringify(place));
-         document.getElementById("A").innerHTML = "getLocation!";
+       
        x.innerHTML =  x.innerHTML+'</br>'+place.name ;
     
       //createMarker(results[i]);
