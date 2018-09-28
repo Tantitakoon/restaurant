@@ -316,7 +316,7 @@ var process = exports.process = function (_Intent) {
                                                 text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
                                                 buttons: [{
                                                     type: "web_url",
-                                                    url:"https://blog.messengerdevelopers.com/using-the-webview-to-create-richer-bot-to-user-interactions-ed8a789523c6",
+                                                    url:"https://advicerestaurant.herokuapp.com/webView.html",
                                                     title: "Set preferences",
                                                     webview_height_ratio: "compact",
                                                     messenger_extensions: false
