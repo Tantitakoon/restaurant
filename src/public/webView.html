@@ -9,9 +9,11 @@
 
 
 <div id="demo"><h1>TEST</h1></div>
+<p id="A"></p>
 
 <script>
 var x = document.getElementById("demo");
+
 var position = {};
 var map;
 var service;
@@ -24,6 +26,7 @@ function getLocation() {
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
+    document.getElementById("A").innerHTML = "New text!";
 }
 function showPosition(position) {
     //console.log();
