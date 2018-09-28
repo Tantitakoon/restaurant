@@ -24,13 +24,12 @@ getLocation();
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-        document.getElementById("A").innerHTML = "getLocation";
-}
+        document.getElementById("A").innerHTML = "getLocation!";
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
         document.getElementById("A").innerHTML = "not getLocation!";
-}
     }
+}
     
 function showPosition(position) {
     //console.log();
