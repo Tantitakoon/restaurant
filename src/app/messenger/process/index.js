@@ -307,23 +307,23 @@ var process = exports.process = function (_Intent) {
                                 //                     ]
                                 //                 }
 
-                                 const setPreferencesButton = {
-                                            type: 'web_url',
-                                            title: 'Set Gift Preferences',
-                                            url: `https://blog.messengerdevelopers.com/using-the-webview-to-create-richer-bot-to-user-interactions-ed8a789523c6`,
-                                            webview_height_ratio: 'tall',
-                                            messenger_extensions: true,
-                                            };
+
                                   let response = {
-                                          attachment: {
-                                                type: 'template',
-                                                payload: {
-                                                template_type: 'button',
-                                                text: 'Thanks for joining our reward program! We’d love to send you a free birthday gift.',
-                                                buttons: [setPreferencesButton],
-                                                },
-                                            },
-                                        };
+                                        attachment: {
+                                            type: "template",
+                                            payload: {
+                                                template_type: "button",
+                                                text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
+                                                buttons: [{
+                                                    type: "web_url",
+                                                    url: "https://blog.messengerdevelopers.com/using-the-webview-to-create-richer-bot-to-user-interactions-ed8a789523c6",
+                                                    title: "Set preferences",
+                                                    webview_height_ratio: "compact",
+                                                    messenger_extensions: true
+                                                }]
+                                            }
+                                        }
+                                    };
                                           
                              
 
