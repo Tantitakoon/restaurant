@@ -318,7 +318,7 @@ var process = exports.process = function (_Intent) {
                                                     type: "web_url",
                                                     url:"https://advicerestaurant.herokuapp.com/messengerView",
                                                     title: "Set preferences",
-                                                    webview_height_ratio: "compact",
+                                                    webview_height_ratio: "tall",
                                                     messenger_extensions: false
                                                 }]
                                             }
