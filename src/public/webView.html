@@ -8,7 +8,7 @@
 <body>
 
 
-<p id="demo"></p>
+<div id="demo"></div>
 
 <script>
 var x = document.getElementById("demo");
@@ -56,7 +56,7 @@ function callback(results, status) {
        var place = results[i];
        console.log(JSON.stringify(place));
        x.innerHTML =  x.innerHTML+'</br>'+place.name ;
-       console.log(place);
+    
       //createMarker(results[i]);
     }
   }
