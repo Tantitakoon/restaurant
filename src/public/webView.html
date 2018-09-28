@@ -24,17 +24,20 @@ getLocation();
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
+        document.getElementById("A").innerHTML = "getLocation";
+}
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
-    }
- 
+        document.getElementById("A").innerHTML = "not getLocation!";
 }
+    }
+    
 function showPosition(position) {
     //console.log();
        this.position.lat = position.coords.latitude; 
        this.position.long =position.coords.longitude;
       
-    y.innerHTML = y.innerHTML+"MYLOCATION"+'</br>'+"Latitude: " + position.coords.latitude + 
+     x.innerHTML = "MYLOCATION"+'</br>'+"Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude+'<hr>';
     
     initialize();
@@ -59,7 +62,7 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
        var place = results[i];
        console.log(JSON.stringify(place));
-       y.innerHTML =  y.innerHTML+'</br>'+place.name ;
+       x.innerHTML =  x.innerHTML+'</br>'+place.name ;
     
       //createMarker(results[i]);
     }
