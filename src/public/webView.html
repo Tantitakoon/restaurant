@@ -8,12 +8,12 @@
 <body>
 
 
-<div id="demo"><h1>TEST</h1></div>
-<p id="A"></p>
+
+<p id="demo"></p>
 
 <script>
 var x = document.getElementById("demo");
-var y = document.getElementById("A");
+
 
 var position = {};
 var map;
@@ -24,7 +24,7 @@ getLocation();
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-          document.getElementById("A").innerHTML = "getLocation!";
+          
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
  
@@ -32,19 +32,16 @@ function getLocation() {
 }
     
 function showPosition(position) {
-    //console.log();
-    document.getElementById("A").innerHTML = "showPosition!";
-       this.position.lat = position.coords.latitude; 
+    
        this.position.long =position.coords.longitude;
       
      x.innerHTML = "MYLOCATION"+'</br>'+"Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude+'<hr>';
-    
-    initialize();
+    //initialize();
       
 }
 function initialize() {
-    document.getElementById("A").innerHTML = "initialize!";
+
   var pyrmont = new google.maps.LatLng( this.position.lat, this.position.long);
   map = new google.maps.Map({
       center: pyrmont,
